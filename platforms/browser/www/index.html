@@ -286,8 +286,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
 
     <script>
-
+		
         jQuery(document).ready(function ($) {
+		
+			if(Url.get.list == undefined){
+				app.initialize();
+			}
+		
 			var onPageLoadListNo= Url.get.list == undefined ? 0 : Url.get.list ;
 			var save = new LocalStorageManager();
 			//debugger;

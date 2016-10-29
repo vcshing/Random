@@ -77,4 +77,3 @@ var app = {
 	}
 };
 
-app.initialize();
