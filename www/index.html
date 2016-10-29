@@ -28,7 +28,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 	    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -456,7 +456,7 @@
 				var target = "_system";
 				var options = "location=yes";
 				var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
-				window.open(url, "_blank", options);
+				window.open(url, target, options);
 	
 			})
 		
