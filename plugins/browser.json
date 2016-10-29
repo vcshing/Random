@@ -43,9 +43,6 @@
         "cordova-plugin-globalization": {
             "PACKAGE_NAME": "random.choose"
         },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "random.choose"
-        },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "random.choose"
         },
@@ -62,6 +59,9 @@
             "PACKAGE_NAME": "random.choose"
         },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "random.choose"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "random.choose"
         }
     },
