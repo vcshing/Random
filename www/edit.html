@@ -391,9 +391,10 @@
 				e.preventDefault();
 				alert(1);
 				var target = "_blank";
-				var options = "location=yes,hidden=yes";
+				var options = "location=yes";
 				var url = "market://developer?id=Sky+Explorer";
-				 cordova.InAppBrowser.open(url, target, options);
+				var ref =  cordova.InAppBrowser.open(url, target, options);
+				ref.addEventListener('loadstart', function(event) { alert(event.url); });
 	
 			})
 			
@@ -401,9 +402,10 @@
 				e.preventDefault();
 				alert(2);
 				var target = "_blank";
-				var options = "location=yes,hidden=yes";
+				var options = "location=yes";
 				var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
-				cordova.InAppBrowser.open(url, target, options);
+				var ref = cordova.InAppBrowser.open(url, target, options);
+				ref.addEventListener('loadstart', function(event) { alert(event.url); });
 			})
 		});
 	
