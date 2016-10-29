@@ -47,6 +47,7 @@
   <allow-intent href="geo:*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
+	<allow-intent href="market:https://play.google.com/*"/>
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>
