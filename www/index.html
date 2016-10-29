@@ -336,7 +336,11 @@
 			$("#slider1_container").bind("click",function(){
 				if(pause==1){
 					jssor_slider1.$Pause()
-					 pause=0;
+					if(Math.floor(Math.random() * 12) + 1 == 1 ){
+						admob.requestInterstitialAd();
+					}
+						
+					pause=0;
 				}else{
 					jssor_slider1.$Play()
 					pause=1;
