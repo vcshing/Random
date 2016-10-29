@@ -136,11 +136,9 @@
 					
                             <li><a href="edit.html?list=2" class="menutitle2">Edit List 3</a></li>
 	
-							<li><a href="#" class="suggestapp1" >Other Apps</a></li>
-							<li><a href="#" class="suggestapp2" >Other Apps2</a></li>
-	
-
 							<li><a href="#" class="menutitlereset">Reset This List!</a></li>
+							
+							<li><a href="#" class="suggestapp1" >Other Apps</a></li>
                    
                         </ul>
                     </div>
@@ -389,7 +387,7 @@
 			
 			$(".suggestapp1").bind("click",function(e){
 				e.preventDefault();
-				alert(1);
+			
 				var target = "_system";
 				var options = "location=yes";
 				var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
@@ -397,16 +395,7 @@
 	
 			})
 			
-			$(".suggestapp2").bind("click",function(e){
-				e.preventDefault();
-				alert(2);
-				var target = "_system";
-				var options = "location=yes";
-				var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
-				
-				window.open(url, target, options);
-				
-			})
+			
 		});
 	
     </script>
