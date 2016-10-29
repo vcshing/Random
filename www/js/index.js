@@ -67,7 +67,7 @@ var app = {
 		  });
 
 		  // Start showing banners (atomatic when autoShowBanner is set to true)
-			setTimeout(function(){ 	admob.createBannerView(); }, 5000);
+			admob.createBannerView();
 		  // Request interstitial (will present automatically when autoShowInterstitial is set to true)
 		  //admob.requestInterstitialAd();
 		
