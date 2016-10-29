@@ -136,16 +136,10 @@
 					
                             <li><a href="edit.html?list=2" class="menutitle2">Edit List 3</a></li>
 	
-							<li><a href="market://developer?id=Sky+Explorer" class="suggest" target="_system">Other Apps</a></li>
-							<li><a href="https://play.google.com/store/apps/developer?id=Sky+Explorer" class="suggest" target="_system">Other Apps2</a></li>
-							<li><a href="#" class="suggest" onclick="window.open('market://developer?id=Sky+Explorer', '_blank', 'location=yes')">Other Apps3</a></li>
-							<li><a href="#" class="suggest" onclick="window.open('market://developer?id=Sky+Explorer', '_system', 'location=yes')">Other Apps4</a></li>
-							<li><a href="#" class="suggest" onclick="window.open('https://play.google.com/store/apps/developer?id=Sky+Explorer', '_blank', 'location=yes')">Other Apps5</a></li>
-							<li><a href="#" class="suggest" onclick="window.open('https://play.google.com/store/apps/developer?id=Sky+Explorer', '_system', 'location=yes')">Other Apps6</a></li>
-							<li><a href="#" class="suggest" onclick="var ref = cordova.InAppBrowser.open('https://play.google.com/store/apps/developer?id=Sky+Explorer', '_blank', 'location=yes')">Other Apps5</a></li>
-							<li><a href="#" class="suggest" onclick="var ref = cordova.InAppBrowser.open('https://play.google.com/store/apps/developer?id=Sky+Explorer', '_system', 'location=yes')">Other Apps6</a></li>
-							<li><a href="#" class="suggest" onclick="var ref = market://developer?id=Sky+Explorer', '_blank', 'location=yes')">Other Apps7</a></li>
-							<li><a href="#" class="suggest" onclick="var ref = cordova.InAppBrowser.open('market://developer?id=Sky+Explorer', '_system', 'location=yes');">Other Apps8</a></li>
+							<li><a href="#" class="suggestapp1" >Other Apps</a></li>
+							<li><a href="#" class="suggestapp2" >Other Apps2</a></li>
+	
+
 							<li><a href="#" class="menutitlereset">Reset This List!</a></li>
                    
                         </ul>
@@ -393,6 +387,24 @@
 				}
 			})
 			
+			$(".suggestapp1").bind("click",function(e){
+				e.preventDefault();
+				alert(1);
+				var target = "_blank";
+				var options = "location=yes,hidden=yes";
+				var url = "market://developer?id=Sky+Explorer";
+				var inAppBrowserRef = cordova.InAppBrowser.open(url, target, options);
+	
+			})
+			
+			$(".suggestapp2").bind("click",function(e){
+				e.preventDefault();
+				alert(2);
+				var target = "_blank";
+				var options = "location=yes,hidden=yes";
+				var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
+				var inAppBrowserRef = cordova.InAppBrowser.open(url, target, options);
+			})
 		});
 	
     </script>

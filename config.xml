@@ -48,9 +48,7 @@
   <platform name="android">
     <allow-intent href="market:*"/>
 	<allow-intent href="https://play.google.com/*"/>
-	<feature name="InAppBrowser">
-		<param name="android-package" value="org.apache.cordova.InAppBrowser" />
-	</feature>
+
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>
