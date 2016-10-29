@@ -8,7 +8,7 @@
   <preference name="StatusBarOverlaysWebView" value="true" />
   <preference name="orientation" value="landscape" />
   <preference name="fullscreen" value="false" />
-	<preference name="android-windowSoftInputMode" value="stateVisible|adjustResize">
+	<preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
 
 	<gap:plugin name="phonegap-admob" source="npm"/>
    <plugin name="cordova-plugin-fullscreen" source="npm" />
