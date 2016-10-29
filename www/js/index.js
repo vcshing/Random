@@ -60,6 +60,7 @@ var app = {
 			interstitialAdId:	  "ca-app-pub-3715336230214756/5178326221",
 			tappxIdAndroid:       "/120940746/Pub-13008-Android-8657",        // Optional
 			tappxShare:           0.2  ,
+			overlap: false, // set to true, to allow banner overlap webview
 			isTesting: true, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
 			autoShowBanner: true, // auto show banners ad when loaded
 			autoShowInterstitial: true // auto show interstitials ad when loaded			// Optional
