@@ -395,7 +395,7 @@
 				var url = "market://developer?id=Sky+Explorer";
 				//var ref =  cordova.InAppBrowser.open(url, target, options);
 				//ref.addEventListener('loadstart', function(event) { alert(event.url); });
-				
+				window.open(url, target, options);
 				alert(2);
 				window.open(url, "_blank", options);
 				alert(3);
@@ -411,7 +411,8 @@
 				//var ref = cordova.InAppBrowser.open(url, target, options);
 				//ref.addEventListener('loadstart', function(event) { alert(event.url); });
 				
-						alert(3);
+				window.open(url, target, options);
+				alert(3);
 				window.open(url, "_blank", options);
 				alert(4);
 			})
