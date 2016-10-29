@@ -25,12 +25,10 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-	    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/custom.css">
@@ -41,29 +39,22 @@
 	<script type="text/javascript" src="js/jssor.slider.mini.js"></script>
 	<script src="js/docs.min.js"></script>
 	<script src="js/local_storage_manager.js"></script>
-	<script src="js/function.js"></script>
-	
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <style>
-        /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
-        .navbar-wrapper {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            width: 100%;
-            height: 51px;
-        }
-        .navbar-wrapper > .container {
-            padding: 0;
-        }
 
-        @media all and (max-width: 768px ){
-            .navbar-wrapper {
-                position: relative;
-                top: 0px;
-            }
-        }
-    </style>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<style>
+.carousel .item{
+    height: 800px;
+	width: 160%;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 800px;
+}
+	</style>
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
@@ -78,283 +69,249 @@
     <title>Hello World</title>
 </head>
 
-<body style="background:black">
-
+<body>
     <!-- NAVBAR
     ================================================== -->
-    <style>
-        /* use navbar-wrapper to wrap navigation bar, the purpose is to overlay navigation bar above slider */
-        .navbar-wrapper {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            width: 100%;
-            height: 51px;
-        }
-        .navbar-wrapper > .container {
-            padding: 0;
-        }
+    <div class="container">
 
-        @media all and (max-width: 768px ){
-            .navbar-wrapper {
-                position: relative;
-                top: 0px;
-            }
-        }
-		
-		.slider_itemcontainer .carousel-caption{
-			margin: 0;
-			position: absolute;
-			top: 55%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate(-50%, -50%);
-		}
-    </style>
-    <div class="navbar-wrapper">
-        <div class="container">
-
-            <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">Random Choice ( Tap To Home )</a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-								
-                        <ul class="nav navbar-nav">
-                      
-								
-                              <li><a href="edit.html?list=0" class="menutitle0">Edit List 1</a></li>
-					
-                            <li><a href="edit.html?list=1" class="menutitle1">Edit List 2</a></li>
-							
-					
-                            <li><a href="edit.html?list=2" class="menutitle2">Edit List 3</a></li>
-							<li><a href="#" class="menutitlereset">Reset All List</a></li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="margin-left:15px">Random Choose</a>
                 </div>
-            </nav>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://www.jssor.com/index.html">Home</a></li>
+                        <li><a href="http://www.jssor.com/tutorial/index.html">Tutorial</a></li>
+                        <li><a href="http://www.jssor.com/help/index.html">Help</a></li>
+                        <li><a href="http://www.jssor.com/demos/index.html">Demos</a></li>
+                        <li><a href="http://www.jssor.com/skins/index.html">Skins</a></li>
+                        <li><a href="http://www.jssor.com/development/index.html">Development</a></li>
+                        <li><a href="http://www.jssor.com/download.html">Download</a></li>
+                        <li><a href="http://www.jssor.com/support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        </div>
     </div>
 
-    <div style="min-height: 50px;">
-				
+    <!-- Use a container to wrap the slider, the purpose is to enable slider to always fit width of the wrapper while window resize -->
+    <div class="container" >
         <!-- Jssor Slider Begin -->
         <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
         <!-- ================================================== -->
-        <div id="slider1_container" style="visibility: hidden; position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 530px; overflow: hidden;">
+        <div class="carousel" id="slider1_container" style="visibility: hidden; position: relative; margin: 0 auto; width: 1140px; height: 442px; overflow: hidden;">
+
             <!-- Loading Screen -->
             <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
+                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+
+                background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;">
                 </div>
-                <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
-                top: 0px; left: 0px; width: 100%; height: 100%;">
+                <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+
+                top: 0px; left: 0px;width: 100%;height:100%;">
                 </div>
             </div>
+
             <!-- Slides Container -->
-            <div class="slider_itemcontainer" u="slides" style="position: absolute; left: 0px; top: 0px; width: 1300px; height: 530px; overflow: hidden;">
-               <!-- <div>
-                    <img u="image" src2="../img/1920/red.jpg" />
+            <div u="slides" style="position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px;
+            overflow: hidden;">
+				<div class="item">
+					<img src="img/home/01.jpg"  class="img-responsive">
 					<div class="container">
-						<div class="carousel-caption" >
-							 <h1 style="font-size: 444%;">Bootstrap 3 Carousel</h1>
+						<div class="carousel-caption">
+							 <h1>Bootstrap 3 Carousel</h1>
+
+							<p>Pictures slide with overlapping words</p>
+							<p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
+
+							</p>
 						</div>
 					</div>
-                </div>
-                <div>
-                    <img u="image" src2="../img/1920/purple.jpg" />
-                </div>
-                <div>
-                    <img u="image" src2="../img/1920/blue.jpg" />
-                </div>
-				-->
+				</div>
+				<div class="item">
+					<img src="img/home/02.jpg"  class="img-responsive">
+					<div class="container">
+						<div class="carousel-caption">
+							 <h1>Bootstrap 3 Carousel</h1>
+
+							<p>Pictures slide with overlapping words</p>
+							<p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
+
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="item3" >
+					<img src="img/home/03.jpg"  class="img-responsive"  >
+					<div class="container">
+						<div class="carousel-caption">
+							 <h1>Bootstrap 3 Carousel</h1>
+
+							<p>Pictures slide with overlapping words</p>
+							<p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
+
+							</p>
+						</div>
+					</div>
+				</div>
+				
             </div>
             
             <!--#region Bullet Navigator Skin Begin -->
             <!-- Help: http://www.jssor.com/tutorial/set-bullet-navigator.html -->
             <style>
-                /* jssor slider bullet navigator skin 21 css */
+                /* jssor slider bullet navigator skin 05 css */
                 /*
-                .jssorb21 div           (normal)
-                .jssorb21 div:hover     (normal mouseover)
-                .jssorb21 .av           (active)
-                .jssorb21 .av:hover     (active mouseover)
-                .jssorb21 .dn           (mousedown)
+                .jssorb05 div           (normal)
+                .jssorb05 div:hover     (normal mouseover)
+                .jssorb05 .av           (active)
+                .jssorb05 .av:hover     (active mouseover)
+                .jssorb05 .dn           (mousedown)
                 */
-                .jssorb21 {
+                .jssorb05 {
                     position: absolute;
                 }
-                .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+                .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
                     position: absolute;
                     /* size of bullet elment */
-                    width: 19px;
-                    height: 19px;
-                    text-align: center;
-                    line-height: 19px;
-                    color: white;
-                    font-size: 12px;
-                    background: url(../img/b21.png) no-repeat;
+                    width: 16px;
+                    height: 16px;
+                    background: url(img/b05.png) no-repeat;
                     overflow: hidden;
                     cursor: pointer;
                 }
-                .jssorb21 div { background-position: -5px -5px; }
-                .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
-                .jssorb21 .av { background-position: -65px -5px; }
-                .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+                .jssorb05 div { background-position: -7px -7px; }
+                .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+                .jssorb05 .av { background-position: -67px -7px; }
+                .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
             </style>
             <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;">
+            <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
                 <!-- bullet navigator item prototype -->
-                <div u="prototype" style="display:none"></div>
+                <div u="prototype"></div>
             </div>
             <!--#endregion Bullet Navigator Skin End -->
             
             <!--#region Arrow Navigator Skin Begin -->
             <!-- Help: http://www.jssor.com/tutorial/set-arrow-navigator.html -->
             <style>
-                /* jssor slider arrow navigator skin 21 css */
+                /* jssor slider arrow navigator skin 11 css */
                 /*
-                .jssora21l                  (normal)
-                .jssora21r                  (normal)
-                .jssora21l:hover            (normal mouseover)
-                .jssora21r:hover            (normal mouseover)
-                .jssora21l.jssora21ldn      (mousedown)
-                .jssora21r.jssora21rdn      (mousedown)
+                .jssora11l                  (normal)
+                .jssora11r                  (normal)
+                .jssora11l:hover            (normal mouseover)
+                .jssora11r:hover            (normal mouseover)
+                .jssora11l.jssora11ldn      (mousedown)
+                .jssora11r.jssora11rdn      (mousedown)
                 */
-                .jssora21l, .jssora21r {
+                .jssora11l, .jssora11r {
                     display: block;
                     position: absolute;
                     /* size of arrow element */
-                    width: 55px;
-                    height: 55px;
+                    width: 37px;
+                    height: 37px;
                     cursor: pointer;
-                    background: url(../img/a21.png) center center no-repeat;
+                    background: url(img/a11.png) no-repeat;
                     overflow: hidden;
                 }
-                .jssora21l { background-position: -3px -33px; }
-                .jssora21r { background-position: -63px -33px; }
-                .jssora21l:hover { background-position: -123px -33px; }
-                .jssora21r:hover { background-position: -183px -33px; }
-                .jssora21l.jssora21ldn { background-position: -243px -33px; }
-                .jssora21r.jssora21rdn { background-position: -303px -33px; }
+                .jssora11l { background-position: -11px -41px; }
+                .jssora11r { background-position: -71px -41px; }
+                .jssora11l:hover { background-position: -131px -41px; }
+                .jssora11r:hover { background-position: -191px -41px; }
+                .jssora11l.jssora11ldn { background-position: -251px -41px; }
+                .jssora11r.jssora11rdn { background-position: -311px -41px; }
             </style>
             <!-- Arrow Left -->
-            <!--<span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;">-->
+            <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
             </span>
             <!-- Arrow Right -->
-           <!-- <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;">-->
+            <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
             </span>
             <!--#endregion Arrow Navigator Skin End -->
             <a style="display: none" href="http://www.jssor.com">Bootstrap Carousel</a>
         </div>
         <!-- Jssor Slider End -->
+		
+		
+		
     </div>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
- <div class="container" style="margin-top:7px">
-<div class="btn-group btn-group-justified" role="group" aria-label="...">
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-primary golistpagebutton0" >Left</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-primary golistpagebutton1">Middle</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-primary golistpagebutton2">Right</button>
-  </div>
-</div>
-  </div>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
+
+    <!-- jssor slider scripts-->
+    <!-- use jssor.slider.debug.js for debug -->
+	
+ <div class="container" style="margin-top:20px;display: flex; justify-content:space-between;">
+	<!-- Split button -->
+	<div class="btn-group dropup" style="">
+	  <button type="button" class="btn btn-info list1">List A</button>
+	  <button type="button" class="btn btn-info dropdown-toggle list1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu">
+		<li><a href="#">A</a></li>
+		<li role="separator" class="divider"></li>
+		<li><a href="#">Edit</a></li>
+	  </ul>
+	</div>
+	
+	<div class="btn-group dropup" style="">
+	  <button type="button" class="btn btn-info list2">List B</button>
+	  <button type="button" class="btn btn-info dropdown-toggle list2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu">
+		<li><a href="#"></a></li>
+		<li role="separator" class="divider"></li>
+		<li><a href="#">Edit</a></li>
+	  </ul>
+	</div>
+	
+	<div class="btn-group dropup" style="">
+	  <button type="button" class="btn btn-info list3">List C</button>
+	  <button type="button" class="btn btn-info dropdown-toggle list3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	  </button>
+	  <ul class="dropdown-menu">
+		<li><a href="#">C</a></li>
+		<li role="separator" class="divider"></li>
+		<li><a href="#">Edit</a></li>
+	  </ul>
+	</div>
+  </div>
+
+
     <script>
 
         jQuery(document).ready(function ($) {
-			var onPageLoadListNo= Url.get.list == undefined ? 0 : Url.get.list ;
-			var save = new LocalStorageManager();
-			//debugger;
-	//alert(JSON.stringify(save.getGameState()));
-	
-	//setDefaultWholeList()
-			if(save.getGameState()===null || save.getGameState()===""){
-				setDefaultWholeList();
-				 wholeListArr= save.getGameState();
-			}else{
-				 wholeListArr= save.getGameState();
-			}
-
-			var listArr = save.getGameState();
-			//debugger;
-			for (i = 0; i < listArr.length; i++) { 
-			
-				$(".menutitle"+ i).html("Edit " + listArr[i].title);
-				$(".golistpagebutton"+ i).html(listArr[i].title);
-			
-			}
-			
-			listArr=listArr[onPageLoadListNo];
-			
-			var bannerHTML ="";
-			//debugger;
-			var bgimg=1;
-			var pause=1;
-			//alert(listArr.content.length);
-			//debugger;
-			for (i = 0; i < listArr.content.length; i++) { 
-				bgimg++;
-				if(bgimg>3){
-					bgimg=1
-				}
-				bannerHTML +="<div>"+
-					
-						"<img u=\"image\" src2=\"img/1920/"+bgimg+".jpg\" />"+
-						
-							"	<div class=\"container\">"+
-									"<div class=\"carousel-caption\" >"+
-							"		 <h1 style=\"font-size: 666%;\">"+listArr.content[i].Name+"</h1>"+
-								"</div>"+
-							"</div>"+
-						"</div>"
-			
-			}
-			$(".slider_itemcontainer").html(bannerHTML);
-			
-			$("#slider1_container").bind("click",function(){
-				if(pause==1){
-					jssor_slider1.$Pause()
-					 pause=0;
-				}else{
-					jssor_slider1.$Play()
-					pause=1;
-				}
-			});
-					
-		
-		
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $Idle: 0,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $Idle: 10,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
                 $PauseOnHover: 0,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
                 $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
                 $SlideEasing: $JssorEasing$.$EaseOutQuint,          //[Optional] Specifies easing for right to left animation, default value is $JssorEasing$.$EaseOutQuad
-                $SlideDuration: 10,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-                $MinDragOffsetToSlide: 1120,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                $SlideDuration: 1000,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
                 //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
                 //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
                 $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
@@ -387,14 +344,20 @@
 
             var jssor_slider1 = new $JssorSlider$("slider1_container", options);
 
-          //responsive code begin
+            //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizing
             function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
-                else
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+				var parentHeight = jssor_slider1.$Elmt.parentNode.clientHeight;
+                if (parentWidth) {
+                    jssor_slider1.$ScaleWidth(parentWidth - 30);
+                }
+                else{
                     window.setTimeout(ScaleSlider, 30);
+				}
+				  //jssor_slider1.$ScaleHeight(parentHeight - 200);
+			
+         
             }
             ScaleSlider();
 
@@ -403,34 +366,47 @@
             $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
 			
-			$(".navlist0").bind("click",function(e){
-				//alert(1);
-		
-				
-				
-			//	location.href="edit?list=1";
-			})
-			
-			$(".golistpagebutton0").bind("click",function(){
-				location.href="index.html?list=0"
-			})
-			$(".golistpagebutton1").bind("click",function(){
-				location.href="index.html?list=1"
-			})
-			$(".golistpagebutton2").bind("click",function(){
-				location.href="index.html?list=2"
-			})
-			
-			$(".menutitlereset").bind("click",function(){
-				if (confirm('Warning Are you sure you reset all List?')) {
-					setDefaultWholeList();
-					location.reload();
-				} else {
-					// Do nothing!
-				}
-			})
-	
+			$('.left').click(function () {
+				jssor_slider1.$Play()
+				alert(1);
+			});
+			$('.right').click(function () {
+				jssor_slider1.$Pause()
+				alert(2);
+			});
         });
+		
+		var save = new LocalStorageManager();
+		var record= save.getBestScore();
+		
+		console.log(record);
+		
+		$('.list1').bind("click",function(){
+			$('.list1').removeClass('btn-info');
+			$('.list1').addClass('btn-danger');
+			$('.list2').removeClass('btn-danger');
+			$('.list2').addClass('btn-info');
+			$('.list3').removeClass('btn-danger');
+			$('.list3').addClass('btn-info');
+		})
+		
+		$('.list2').bind("click",function(){
+			$('.list1').removeClass('btn-danger');
+			$('.list1').addClass('btn-info');
+			$('.list2').removeClass('btn-info');
+			$('.list2').addClass('btn-danger');
+			$('.list3').removeClass('btn-danger');
+			$('.list3').addClass('btn-info');
+		})
+		
+		$('.list3').bind("click",function(){
+			$('.list1').removeClass('btn-danger');
+			$('.list1').addClass('btn-info');
+			$('.list2').removeClass('btn-danger');
+			$('.list2').addClass('btn-info');
+			$('.list3').removeClass('btn-info');
+			$('.list3').addClass('btn-danger');
+		})
 		
 		
     </script>

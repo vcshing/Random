@@ -1,0 +1,37 @@
+.button.up {
+position: absolute;
+left:    7%;
+bottom:   30%;
+}
+
+.button.left {
+position: absolute;
+left:    2%;
+bottom:   20%;
+}
+
+.button.right {
+position: absolute;
+left:    12%;
+bottom:   20%;
+}
+
+.button.down {
+position: absolute;
+left:    7%;
+bottom:   10%;
+}
+
+.button.start {
+position: absolute;
+left:    7%;
+bottom:   50%;
+}
+
+* {
+  .border-radius(0) !important;
+}
+
+#field {
+    margin-bottom:20px;
+}
