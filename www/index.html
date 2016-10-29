@@ -325,7 +325,7 @@
 						
 							"	<div class=\"container\">"+
 									"<div class=\"carousel-caption\" >"+
-							"		 <h1 style=\"font-size: 666%;\">"+listArr.content[i].Name+"</h1>"+
+							"		 <h1 style=\"font-size: 666%;transform: translate(0, -50%);\">"+listArr.content[i].Name+"</h1>"+
 								"</div>"+
 							"</div>"+
 						"</div>"
@@ -433,7 +433,20 @@
 					// Do nothing!
 				}
 			})
-	
+			
+			if(onPageLoadListNo==0){
+				$('.golistpagebutton0').removeClass('btn-primary');
+				$('.golistpagebutton0').addClass('btn-danger');
+			}else if(onPageLoadListNo==1){
+				$('.golistpagebutton1').removeClass('btn-primary');
+				$('.golistpagebutton1').addClass('btn-danger');
+			}else{
+				$('.golistpagebutton2').removeClass('btn-primary');
+				$('.golistpagebutton2').addClass('btn-danger');
+			}
+			
+					
+		
         });
 		
 		

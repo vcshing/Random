@@ -23,5 +23,6 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="orientation" value="landscape" />
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
 </widget>
