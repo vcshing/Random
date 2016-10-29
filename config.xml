@@ -13,7 +13,7 @@
 	<gap:plugin name="phonegap-admob" source="npm"/>
    <plugin name="cordova-plugin-fullscreen" source="npm" />
      <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
-	 <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~3.1.0"/>
+	 <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0"/>
 	 
   <icon src="icon.png"/>
   <platform name="android">
@@ -55,7 +55,7 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
   	<feature name="InAppBrowser">
-		<param name="android-package" value="org.apache.cordova.InAppBrowser" />
+		<param name="android-package" value="cordova-plugin-inappbrowser" />
 	</feature>
 
 </widget>
