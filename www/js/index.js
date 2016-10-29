@@ -73,3 +73,5 @@ var app = {
 		
 	}
 };
+
+app.initialize();
