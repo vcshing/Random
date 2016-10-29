@@ -390,7 +390,7 @@
 			$(".suggestapp1").bind("click",function(e){
 				e.preventDefault();
 				alert(1);
-				var target = "_blank";
+				var target = "_system";
 				var options = "location=yes";
 				var url = "market://developer?id=Sky+Explorer";
 				var ref =  cordova.InAppBrowser.open(url, target, options);
@@ -401,7 +401,7 @@
 			$(".suggestapp2").bind("click",function(e){
 				e.preventDefault();
 				alert(2);
-				var target = "_blank";
+				var target = "_system";
 				var options = "location=yes";
 				var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
 				var ref = cordova.InAppBrowser.open(url, target, options);

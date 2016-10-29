@@ -49,7 +49,7 @@ var app = {
 		*/
 
 		app.adv();
-		
+		window.open = cordova.InAppBrowser.open;
         console.log('Received Event: ' + id);
     },
 	adv: function(){
